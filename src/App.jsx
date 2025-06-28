@@ -1,11 +1,14 @@
+import FormularioColor from "./components/FormularioColor"
+
 function App() {
 
   return (
     <>
-      <main className="container mt-3">
-        <h1>Hola mundo</h1>
+      <main className="pt-3 fondoRosaClaro text-center">
+        <h1>Paleta de colores 🎨</h1>
+        <FormularioColor></FormularioColor>
       </main>
-      <footer className="py-4 text-center">
+      <footer className="py-4 text-center fondoRosaOscuro">
         <p>&copy; Todos los derechos reservados - Claudia Ximena Barrientos</p>
       </footer>
       

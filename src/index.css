@@ -1,0 +1,25 @@
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.fondoRosaClaro{
+    background-color: pink;
+    color: palevioletred;
+    padding: 5%;
+}
+
+.fondoRosaOscuro{
+    background-color: palevioletred;
+    color: white;
+}
+
+.cuadrado{
+  max-height: 20%;
+  min-width: 20%;
+}

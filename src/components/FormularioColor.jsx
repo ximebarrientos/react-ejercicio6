@@ -1,20 +1,20 @@
-import {Form,Button} from 'react-bootstrap/Form';
+import { Form, Button } from "react-bootstrap";
+import GrillaColores from "./GrillaColores";
 
 const FormularioColor = () => {
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="name@example.com" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Example textarea</Form.Label>
-        <Form.Control as="textarea" rows={3} />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+    <>
+      <Form>
+        <Form.Group className="mb-3 d-flex">
+            <div className="border cuadrado">caja</div>
+          <Form.Control type="text" placeholder="Ingrese un color ej: blue" />
+          <Button variant="info" type="submit">
+            Enviar
+          </Button>
+        </Form.Group>
+      </Form>
+      <GrillaColores></GrillaColores>
+    </>
   );
 };
 
