@@ -2,11 +2,11 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className="container mt-3">
         <h1>Hola mundo</h1>
       </main>
-      <footer>
-
+      <footer className="py-4 text-center">
+        <p>&copy; Todos los derechos reservados - Claudia Ximena Barrientos</p>
       </footer>
       
     </>
