@@ -18,6 +18,12 @@ const FormularioColor = () => {
     reset()
   }
 
+  const borrarColor=(nombreColor)=>{
+    //filtrar el array de colores y generar uno nuevo para poder modificarlo y actualizar state
+    const coloresFiltrados=colores.filter((itemColor)=>itemColor!==nombreColor)
+    setColores(coloresFiltrados)
+  }
+
 
   return (
     <>
@@ -41,7 +47,7 @@ const FormularioColor = () => {
         </Form.Group>
           <Form.Text className="text-danger">{errors.color?.message}</Form.Text>
       </Form>
-      <GrillaColores colores={colores}></GrillaColores>
+      <GrillaColores colores={colores} borrarColor={borrarColor} ></GrillaColores>
     </>
   );
 };
