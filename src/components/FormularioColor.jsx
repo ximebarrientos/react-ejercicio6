@@ -1,6 +1,7 @@
 import { Form, Button } from "react-bootstrap";
 import GrillaColores from "./GrillaColores";
 import { useForm } from "react-hook-form"
+import { useState } from "react";
 
 const FormularioColor = () => {
     const {
@@ -10,14 +11,18 @@ const FormularioColor = () => {
     formState: { errors },
   } = useForm()
 
-  const agregarColor=()=>{
-    //aqui codigo de la fn
+  const [colores,setColores]=useState([])
+
+  const agregarColor=(dato)=>{
+    console.log(dato.color)
+    setColores([...colores, dato.color])
     reset()
   }
 
+
   return (
     <>
-      <Form onSubmit={handleSubmit()}>
+      <Form onSubmit={handleSubmit(agregarColor)}>
         <Form.Group className="mb-3 d-flex">
             <div className="border cuadrado">caja</div>
           <Form.Control type="text" placeholder="Ingrese un color ej: blue" {...register('color',{
