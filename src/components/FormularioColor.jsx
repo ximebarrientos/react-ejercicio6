@@ -14,7 +14,6 @@ const FormularioColor = () => {
   const [colores,setColores]=useState([])
 
   const agregarColor=(dato)=>{
-    console.log(dato.color)
     setColores([...colores, dato.color])
     reset()
   }
@@ -42,7 +41,7 @@ const FormularioColor = () => {
         </Form.Group>
           <Form.Text className="text-danger">{errors.color?.message}</Form.Text>
       </Form>
-      <GrillaColores></GrillaColores>
+      <GrillaColores colores={colores}></GrillaColores>
     </>
   );
 };
