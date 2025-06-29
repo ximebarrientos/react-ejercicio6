@@ -1,7 +1,7 @@
 import { Form, Button } from "react-bootstrap";
 import GrillaColores from "./GrillaColores";
 import { useForm } from "react-hook-form"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FormularioColor = () => {
     const {
@@ -11,7 +11,11 @@ const FormularioColor = () => {
     formState: { errors },
   } = useForm()
 
-  const [colores,setColores]=useState([])
+  
+  const coloresLocalStorage=JSON.parse(localStorage.getItem('colores'))||[]
+  const [colores,setColores]=useState(coloresLocalStorage)
+
+  useEffect(()=>{localStorage.setItem('colores',JSON.stringify(colores))},[colores])
 
   const agregarColor=(dato)=>{
     setColores([...colores, dato.color])
